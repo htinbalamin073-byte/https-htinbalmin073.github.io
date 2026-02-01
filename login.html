@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Login</title>
+</head>
+<body style="text-align:center;margin-top:100px;">
+  <h2>My Private Website</h2>
+  <input type="password" id="pw" placeholder="Enter password">
+  <br><br>
+  <button onclick="check()">Login</button>
+
+  <script>
+    function check() {
+      const password = "1234"; // မင်းစိတ်ကြိုက် ပြောင်း
+      if (document.getElementById("pw").value === password) {
+        window.location.href = "home.html";
+      } else {
+        alert("Wrong password!");
+      }
+    }
+  </script>
+</body>
+</html>
