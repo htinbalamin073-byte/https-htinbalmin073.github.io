@@ -1,9 +1,58 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>My Personal Website</title>
+  <meta charset="UTF-8">
+  <title>Private Site</title>
+  <style>
+    body {
+      font-family: Arial;
+      background: #111;
+      color: #fff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+    .box {
+      text-align: center;
+      background: #222;
+      padding: 30px;
+      border-radius: 10px;
+    }
+    input {
+      padding: 10px;
+      margin-top: 10px;
+      width: 200px;
+    }
+    button {
+      padding: 10px 20px;
+      margin-top: 10px;
+      cursor: pointer;
+    }
+  </style>
 </head>
 <body>
-  <h1>Hello, this is my website</h1>
+
+<div class="box">
+  <h2>🔒 Enter Password</h2>
+  <input type="password" id="pw" placeholder="Password">
+  <br>
+  <button onclick="check()">Enter</button>
+  <p id="msg"></p>
+</div>
+
+<script>
+  const PASSWORD = "1234"; // ဒီမှာ password ပြောင်း
+
+  function check() {
+    const pw = document.getElementById("pw").value;
+    if (pw === PASSWORD) {
+      window.location.href = "home.html";
+    } else {
+      document.getElementById("msg").innerText = "❌ Wrong password";
+    }
+  }
+</script>
+
 </body>
 </html>
